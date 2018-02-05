@@ -1,0 +1,121 @@
+.choose {
+  padding: 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.choose-one{
+  padding: 15px 0 0 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.take-out-marginR {
+  margin-right: 0;
+}
+
+.take-out-marginR .col-xs-4 {
+  padding-right: 0;
+  margin-bottom: 10px;
+}
+
+.price-box {
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+.specialColor {
+  border: 1px solid #3ca8d9;
+  color: #3ca8d9;
+}
+
+.price-box div:nth-child(1) {
+  font-size: 18px;
+}
+
+.price-box div:nth-child(2) {
+  font-size: 10px;
+}
+
+.margin20 {
+  margin: 0 0 20px 0;
+}
+.beCareful{
+  padding: 5px 15px 10px 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.look {
+  padding: 5px 0;
+  border: 1px solid #3ca8d9;
+  border-radius: 100px;
+  font-size: 14px;
+  color: #3ca8d9;
+}
+
+.question {
+  padding: 10px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+}
+
+.triangle-facing-right {
+  border-right: 1.5px solid;
+  border-bottom: 1.5px solid;
+  width: 12px;
+  height: 12px;
+  color: #bbb;
+  transform: rotate(-45deg);
+  margin-top: .1rem;
+}
+
+.buy {
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  background: #3ca8d9;
+  font-size: 17px;
+}
+
+ul {
+  margin-top: 10px;
+  list-style: none;
+  font-size: 0.24rem;
+  color: #666;
+  line-height: 0.5rem;
+}
+
+.paddingB70 {
+  padding-bottom: 70px;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+label {
+  padding-left: 0;
+}
+
+label i {
+  font-size: 12px;
+  font-style: normal;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  line-height: 12px;
+  color: #fff;
+  vertical-align: middle;
+  margin: -2px 2px 1px 0px;
+  border: #2489c5 1px solid;
+}
+
+input[type="checkbox"] + i {
+  background: #2489c5;
+}
+
+.oilExplainText {
+  line-height: .4rem;
+  font-size: .24rem;;
+}

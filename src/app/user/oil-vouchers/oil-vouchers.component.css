@@ -1,0 +1,85 @@
+.white {
+  color: #fff;
+}
+
+.selected {
+  color: #3ca8d9;
+  border-bottom: 0.04rem solid #3ca8d9;
+}
+
+.oilContent {
+  width: 96%;
+  padding: 1%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.contentHead {
+  padding: 2% 6%;
+  background-color: #ffffff;
+  box-shadow:0 1px 4px 0 rgba(123,123,123,0.50);
+}
+
+.contentHead small{
+  font-size: 0.2rem;
+  color: #666666;
+}
+
+.contentHead h5{
+  font-size: 0.3rem;
+}
+
+.contentHead h4{
+  font-size: 0.4rem;
+}
+
+.contentBox {
+  background-color: #fff;
+  margin-top: 0.05rem;
+  width: 96%;
+  box-shadow:0 1px 4px 0 rgba(123,123,123,0.50);
+}
+
+.contentBox ol{
+  padding: 0;
+}
+
+.contentBox li {
+  list-style-type: none;
+  padding: 2%;
+  font-size: 0.3rem;
+}
+
+.oilContent h4 {
+  font-weight: bold;
+  margin: 1% auto;
+}
+
+.look {
+  font-size: 0.3rem;
+  color: #3ca8d9;
+}
+
+@media screen and (max-width: 374px) {
+  .discount-bg .wordOilRight {
+    padding-top: 1%;
+  }
+}
+
+.nullBox{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 3rem;
+  background-color: #f0f1f3;
+  height: 100%;
+}
+
+.nullBg{
+  width: 3rem;
+}
+
+.nullBox p{
+  font-size: 0.4rem;
+  padding-top: 0.5rem;
+}

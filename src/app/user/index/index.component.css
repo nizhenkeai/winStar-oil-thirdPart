@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clearBox {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  background-color: #ffffff;
+  padding: 5% 0;
+  margin-bottom: 20px;
+}
+
+.head h3{
+  font-size: 0.42rem;
+}
+
+.head h5{
+  font-size: 0.3rem;
+}
+
+.headLogo {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.list-group-item {
+  border-radius: 0;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+.indexUl li{
+  padding: 0.2rem 0.4rem;
+  font-size: 0.3rem;
+}
+
+.triangle-facing-right {
+  display: inline-block;
+  float: right;
+  border-right: 1.5px solid;
+  border-bottom: 1.5px solid;
+  width: 12px;
+  height: 12px;
+  color: #bbb;
+  transform: rotate(-45deg);
+  margin-top: 0.05rem;
+}

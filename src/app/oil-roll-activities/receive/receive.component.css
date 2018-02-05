@@ -1,0 +1,52 @@
+.input-group-addon {
+  border: none;
+  background-color: transparent;
+}
+
+.img-width {
+  width: 25px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: transparent;
+}
+
+form {
+  margin-top: 10%;
+}
+
+.btn-lg {
+  border-radius: 25px;
+}
+
+.mg-top {
+  margin-top: 30%;
+}
+
+.mg-top-20 {
+  margin-top: 20%;
+}
+
+a {
+  text-decoration: underline !important;
+  color: #3ca8d9 !important;
+}
+
+.get-code {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  color: white;
+  padding: 2px 8px;
+}
+.btn{
+  border-color: #3ca8d9 !important;
+  background-color: #3ca8d9 !important;
+}

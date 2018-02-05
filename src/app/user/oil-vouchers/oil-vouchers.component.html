@@ -1,0 +1,33 @@
+<div class="container oilContent" *ngFor="let oilVouchers of qsData" [@flyIn]="'inactive'">
+  <div class="contentHead">
+    <small>订单号：{{oilVouchers.orderId}}</small>
+    <h4>油券总额：{{oilVouchers.totalPrice}}元</h4>
+    <h5>余额：{{oilVouchers.surplusPrice}}元 {{oilVouchers.totalNumber}}张</h5>
+    <h5 class="text-right" (click)="getOilData(oilVouchers.orderId);changeUp(oilVouchers);">
+      <span class="look">查看券码</span>
+      <span *ngIf="isUp" class="pull-right triangle-facing-right up color666"></span>
+      <span *ngIf="!isUp" class="pull-right triangle-facing-right down color666"></span>
+    </h5>
+  </div>
+
+
+  <div *ngIf="oilVouchers.isTrue" class="container contentBox">
+    <ol *ngFor="let oilCont of oilData; let i = index">
+      <li *ngIf="oilCont.useState == 0">
+        <span> NO: {{i+1}} &nbsp;{{oilCont.panAmt}}元加油券</span> <a class="look pull-right"
+                                                                  (click)="getPan(oilCont.id,oilCont.panAmt);">
+        立即使用</a>
+      </li>
+      <li *ngIf="oilCont.useState == 1">
+        <span style="color:#c8c8c8;"> NO: {{i+1}} &nbsp;{{oilCont.panAmt}}元加油券</span> <a style="color:#c8c8c8;"
+                                                                                         class="look pull-right">
+        已使用</a>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="nullBox" *ngIf="isNull===true">
+  <img class="nullBg" src="assets/img/oilVouchers-null-Bg.png" alt="暂无加油券">
+  <p>暂无加油券</p>
+</div>
+<swal #dialog></swal>

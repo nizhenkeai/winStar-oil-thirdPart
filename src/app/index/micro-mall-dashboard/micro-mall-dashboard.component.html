@@ -1,0 +1,73 @@
+<div [@flyIn]="'inactive'">
+
+  <div class="container-fluid box">
+    <div class="row" style="margin-top: 1.2rem">
+      <div class="col-xs-12 text-center">
+        <h3>加油券购买</h3>
+      </div>
+    </div>
+
+    <form #f="ngForm" class="padding-top2">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <span class="input-group-addon bgColorWhite input-group-addon-left" id="basic-addon1">手机号码：</span>
+            <input name="phoneNum" #phoneNum="ngModel" (ngModel)="phoneNum" type="tel"
+                   class="form-control bgColorWhite addBorderB delBorderRadius"
+                   required placeholder="请输入手机号码" aria-describedby="basic-addon1" maxlength="11">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group code">
+            <span class="input-group-addon bgColorWhite input-group-addon-left" id="basic-addon2">验证码：</span>
+            <input name="validCode" #validCode="ngModel" (ngModel)="validCode" type="email"
+                   class="form-control bgColorWhite addBorderB delBorderRadius"
+                   required maxlength="4" aria-describedby="basic-addon2">
+          </div>
+          <div class="codeImgBox">
+            <span class="codeImg"><img [src]="src" alt=""></span>
+            <span class="codeFont" (click)="changeCodeImg()"><span class="blueColor">换一张</span></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group" style="margin-top: .4rem;">
+            <span class="input-group-addon bgColorWhite input-group-addon-left">手机验证码：</span>
+            <input name="noteValidCode" #noteValidCode="ngModel" (ngModel)="noteValidCode" type="tel"
+                   class="form-control bgColorWhite addBorderB"
+                   required placeholder="请输入手机验证码" maxlength="6">
+            <span class="input-group-addon bgColorWhite smallFont">
+        <span *ngIf="!isTime" (click)="regPhoneNum(phoneNum.value,validCode.value)" class="getCode blueBgColor">获取验证码</span>
+        <span *ngIf="isTime" class="getCode">重新发送({{second}})</span>
+      </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-top: 1.4rem">
+        <div class="col-xs-12">
+          <button class="btn btn-block sucBtn" [disabled]="f.invalid" (click)="userLogin(phoneNum.value, noteValidCode.value)">完成</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row logoImg" style="margin-top: 1.4rem;">
+      <div class="col-xs-12 text-center">
+        <img src="./assets/img/indexLogo.png"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+<swal #dialog></swal>
+
+
+
+
+

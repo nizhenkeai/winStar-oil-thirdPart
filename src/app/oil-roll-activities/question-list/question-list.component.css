@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.qsBox li {
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 .2rem;
+  list-style: none;
+}
+
+.qsBox .special-li {
+  height: 2rem;
+  line-height: .5rem;
+  padding: .5rem .2rem;
+}
+
+.qsBox .special-triangle {
+  margin-top: .4rem;
+}
+
+.triangle-facing-right {
+  display: inline-block;
+  float: right;
+  border-right: 1.5px solid;
+  border-bottom: 1.5px solid;
+  width: 12px;
+  height: 12px;
+  color: #bbb;
+  transform: rotate(-45deg);
+  margin-top: .36rem;
+}

@@ -1,0 +1,162 @@
+<div class="container-fluid" style="overflow:hidden;" [@flyIn]="'inactive'">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="goods">商品明细</h1>
+      <span class="oil-vouchers marginL5">{{shopPrice}}元加油券</span>
+    </div>
+  </div>
+  <div class="row paddingB10">
+    <div class="col-xs-12">
+      <span class="marginL5">价格</span>
+      <span class="pull-right marginR5">￥{{salePrice}} * 1</span>
+    </div>
+  </div>
+
+  <div class="row paddingB10 borderT borderB">
+    <div class="col-xs-12">
+      <span class="marginL5">优惠</span>
+    </div>
+  </div>
+  <div class="row paddingB10 borderB">
+    <div class="col-xs-12" (click)="changeUp()">
+      <span class="color666 paddingL20">抵扣券</span>
+      <span class="pull-right marginR5">
+           <span class="padding10" id="checkedCoupon">{{couponName}}</span>
+           <span *ngIf="isUp" class="pull-right triangle-facing-right up color666"></span>
+           <span *ngIf="!isUp" class="pull-right triangle-facing-right down color666"></span>
+         </span>
+    </div>
+  </div>
+  <div *ngIf="!isUp" class="row paddingL40 color666">
+    <!--<div class="radio col-xs-12 ">-->
+      <!--<label>-->
+        <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="" (click)="emptyCoupon()">-->
+        <!--不使用抵扣券-->
+      <!--</label>-->
+    <!--</div>-->
+
+    <div class="radio col-xs-12" *ngFor="let coupon of coupons" >
+      <label >
+        <input type="radio" (click)="checkCoupon(coupon.id,coupon.amount,coupon.name)" name="mycoupon"
+                value=" {{coupon.id}}"  id="{{coupon.id}}">
+        {{coupon.name}}
+      </label>
+    </div>
+
+  </div>
+
+  <!-- <div class="row paddingB10 borderT borderB">
+     <div class="col-xs-12">
+       <span class="marginL5">优惠</span>
+     </div>
+   </div>
+
+
+   <div class="row paddingB10 borderB">
+     <div class="col-xs-12" (click)="changeUp()">
+       <span class="color666 paddingL20">抵扣券</span>
+       <span class="pull-right marginR5">
+           <span class="padding10">直减50元</span>
+           <span *ngIf="isUp" class="pull-right triangle-facing-right up color666"></span>
+           <span *ngIf="!isUp" class="pull-right triangle-facing-right down color666"></span>
+         </span>
+     </div>
+   </div>
+   <div *ngIf="!isUp" class="row paddingL40 color666">
+     <div class="radio col-xs-12 ">
+       <label>
+         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+         不使用抵扣券
+       </label>
+     </div>
+     <div class="radio col-xs-12">
+       <label>
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+         直减50元
+       </label>
+     </div>
+   </div>
+
+   <div class="row paddingB10">
+     <div class="col-xs-12">
+       <span class="color666 paddingL20">其他</span>
+       <span class="pull-right marginR5">首单优惠购立减25元</span>
+     </div>
+   </div>
+   <div  class="row paddingB10">
+     <div class="col-xs-12">
+       <span class="color666 paddingL20">折扣</span>
+       <span class="pull-right marginR5">无</span>
+     </div>
+   </div>-->
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom font text-center">
+  <div class="col-xs-8">实际支付：<span>￥{{deductPrice}}</span></div>
+  <button class="col-xs-4 pull-right buy" [disabled]="disabled"
+          [class.specialBtn]="disabled"
+          data-toggle="modal" data-target="#myModal">
+    {{btnText}}
+  </button>
+</nav>
+<div id="mess_loaddinghtml5" *ngIf="isHaveLoad">
+  <div class="loadding">
+    <div class="loaddingtishi"></div>
+    <div class="spinner">
+      <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="changeImg1()"><span
+          aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">请选择支付方式</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label (click)="changeImg1()" style="margin-bottom: 20px;">
+            <img class="fromImg fromImgX" [src]="img1" alt="">
+            <input name="way" type="radio" value="105" checked hidden/>
+            <img class="fromImg" src="./assets/img/jian.png" alt="">
+            <p>中国建设银行银联卡支付</p>
+          </label><br/>
+          <label (click)="changeImg2()">
+            <img class="fromImg fromImgX" [src]="img2" alt="">
+            <input name="way" type="radio" value="991" hidden/>
+            <img class="fromImg" src="./assets/img/wei.png" alt="">
+            <p>微信支付</p>
+          </label><br/>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btnConfirm" data-dismiss="modal" (click)="addOilOrder()">确定</button>
+      </div>
+    </div>
+  </div>
+</div>

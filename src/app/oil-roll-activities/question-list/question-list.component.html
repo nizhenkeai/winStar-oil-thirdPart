@@ -1,0 +1,6 @@
+<ul class="qsBox" [@flyIn]="'inactive'">
+  <li *ngFor="let qusetion of qsData" [routerLink]="['/activity/answer', qusetion.id]" [ngClass]="{'special-li': qusetion.questionsName.length>20 && width<=320}">
+    <div style="float: left; width: 94%;">{{qusetion.questionsName}}</div>
+    <div [ngClass]="{'special-triangle': qusetion.questionsName.length>20 && width<=320}" class="triangle-facing-right"></div>
+  </li>
+</ul>

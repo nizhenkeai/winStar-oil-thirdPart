@@ -1,0 +1,56 @@
+.white {
+  color: #fff;
+}
+
+.selected {
+  color: #3ca8d9;
+  border-bottom: 0.04rem solid #3ca8d9;
+}
+
+.oilContent {
+  width: 96%;
+  padding: 1%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.contentHead {
+  padding: 2% 6%;
+  background-color: #ffffff;
+  box-shadow: 0.1rem 0.1rem #dddddd;
+}
+
+.contentHead h5{
+  font-size: 0.3rem;
+}
+
+.contentHead h4{
+  font-size: 0.4rem;
+}
+
+.contentBox {
+  background-color: #fff;
+  margin-top: 5px;
+  width: 96%;
+}
+
+.contentBox li {
+  padding: 2%;
+  font-size: 0.3rem;
+}
+
+.oilContent h4 {
+  font-weight: bold;
+  margin: 1% auto;
+}
+
+.look {
+  font-size: 0.3rem;
+  color: #3ca8d9;
+}
+
+@media screen and (max-width: 374px) {
+  .discount-bg .wordOilRight {
+    padding-top: 1%;
+  }
+}

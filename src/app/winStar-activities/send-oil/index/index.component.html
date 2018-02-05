@@ -1,0 +1,12 @@
+<div class="container text-center" style="padding:0;">
+  <div class="row">
+    <div class="col-xs-12 get-oil-ticket white">
+      <h3>恭喜您获得一张加油代金券</h3>
+      <h5>输入手机号码立即领取最高50元代金券</h5>
+    </div>
+    <div class="col-xs-12">
+      <input #phone type="tel" maxlength="11" class="input-card" placeholder="请输入手机号"/>
+      <button #t (click)="getUserDetails(phone.value)" type="button" class="button-card">{{tText}}</button>
+    </div>
+  </div>
+</div>

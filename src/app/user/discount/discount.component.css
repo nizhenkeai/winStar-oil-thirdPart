@@ -1,0 +1,19 @@
+.discountHead {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #ffffff;
+}
+
+.discountHeadDiv {
+  padding: 0 0.4rem;
+  font-size: 0.3rem;
+}
+
+.white {
+  color: #fff;
+}
+
+.selected {
+  color: #3ca8d9;
+  border-bottom: 0.04rem solid #3ca8d9;
+}

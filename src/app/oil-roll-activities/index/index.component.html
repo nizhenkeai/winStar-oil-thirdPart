@@ -1,0 +1,61 @@
+<div [@flyIn]="'inactive'">
+  <div class="container-fluid">
+    <div class="row choose-one">当前手机号:
+      <span>{{app_phoneNumber}}</span>&nbsp;
+      <a (click)="claerLocalStorage()">切换</a>
+    </div>
+    <div class="row choose">请选择加油券充值金额</div>
+    <div class="row text-center take-out-marginR">
+      <div *ngFor="let money of moneys" class="col-xs-4" (click)="saveId(money.id,money.salePrice,money.shopPrice)">
+        <div class="price-box" [ngClass]="{'specialColor': money.id==id}">
+          <div>{{money.shopPrice}}元</div>
+          <div>售价{{money.salePrice}}元</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid margin20">
+    <div class="row beCareful">注意事项：本次充值由优驾行提供代办服务</div>
+    <div class="row">
+      <div [routerLink]="['/user/oilVouchers']" class="col-xs-4 col-xs-push-4 text-center look">
+        查看我的加油券
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid paddingB70">
+    <!--<div class="row question">-->
+    <!--<div class="col-xs-12" [routerLink]="['/activity/question']">-->
+    <!--<span>常见问题</span>-->
+    <!--<span class="pull-right triangle-facing-right"></span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="row">
+      <!--<div class="col-xs-12 oilExplainText" #oilExplainText [innerHtml]="oilExplainHtml">-->
+      <div class="col-xs-12 oilExplainText" #oilExplainText>
+        使用规则:<br>
+        1.本电子油券仅限汽油品类并长期有效。<br>
+        2.本电子油券是不记名券，不挂失，不退换，本服务不与延长壳牌活动叠加使用。<br>
+        3.电子油券以一百元为单位，不找零不兑现。<br>
+        4.加油券以电子油券的形式在“平安产险陕西”官方微信加油业务界面 ”查看我的加油券“中显示，使用时在陕西省内各<b>延长壳牌加油站柜台输入油券电子码或扫二维码即可。</b><br>
+        5.如有电子油券使用问题，请联系我们的官方免费客服热线400-8012122（工作日：09:00-18:00），我们会第一时间为您解决。<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" style="overflow: hidden;">
+        <form style="font-size: 0.24rem;">
+          <div class="checkbox">
+            <label><input type="checkbox" hidden disabled checked><i>✓</i>同意</label>
+            <a [routerLink]="['/activity/agreement']" class="font-weight">《电子油券购买服务协议》</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom" (click)="buy()">
+  <div class="container text-center buy">
+    立即购买
+  </div>
+</nav>
+

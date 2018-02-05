@@ -1,0 +1,11 @@
+<div class="discount-bg" *ngFor="let couponList of data">
+  <img src="assets/img/discount@3x.png" class="img-responsive">
+  <div class="text-center white wordLeft">
+    <span class="center-block"><b>{{couponList.amount}}</b>元</span>
+    <span class="center-block">折扣券</span>
+  </div>
+  <div class="wordRight">
+    <h5>直减{{couponList.amount}}元</h5>
+    <h6>{{couponList.validBeginAt | date:'yyyy.MM.dd'}} - {{couponList.validEndAt | date:'yyyy.MM.dd'}}</h6>
+  </div>
+</div>

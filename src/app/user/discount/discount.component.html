@@ -1,0 +1,22 @@
+<div class="container" [@flyIn]="'inactive'">
+  <nav class="row text-center discountHead">
+    <div class="col-xs-4 discountHeadDiv" (click)="isShow(1)">
+      <div [ngClass]="{'selected': show_1}">待使用 ({{couponList_0.length}})</div>
+    </div>
+    <div class="col-xs-4 discountHeadDiv" (click)="isShow(2);">
+      <div [ngClass]="{'selected': show_2}">已使用 ({{couponList_1.length}})</div>
+    </div>
+    <div class="col-xs-4 discountHeadDiv" (click)="isShow(3)">
+      <div [ngClass]="{'selected': show_3}">已失效 ({{couponList_2.length}})</div>
+    </div>
+  </nav>
+  <!-- 待使用 -->
+  <app-pending-use [data]="couponList_0" *ngIf="show_1"></app-pending-use>
+
+  <!-- 已使用 -->
+  <app-already-use [data]="couponList_1" *ngIf="show_2"></app-already-use>
+
+  <!-- 已失效 -->
+  <app-invalid-use [data]="couponList_2" *ngIf="show_3"></app-invalid-use>
+</div>
+

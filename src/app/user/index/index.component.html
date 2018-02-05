@@ -1,0 +1,15 @@
+<div class="container" [@flyIn]="'inactive'">
+  <div class="row head clearBox">
+    <div class="col-xs-4">
+      <img src="assets/img/headImg.png" class="img-circle headLogo" alt="">
+    </div>
+    <div class="col-xs-8 clearBox">
+      <h3>优驾行用户</h3>
+      <h5>已绑定交通安全信息卡</h5>
+    </div>
+  </div>
+  <ul class="list-group indexUl">
+    <li class="list-group-item" [routerLink]="['/user/oilVouchers']" routerLinkActive="active">我的加油券 <span class="pull-right triangle-facing-right"></span></li>
+    <li class="list-group-item" [routerLink]="['/user/discount']" routerLinkActive="active">我的折扣券 <span class="pull-right triangle-facing-right"></span></li>
+  </ul>
+</div>

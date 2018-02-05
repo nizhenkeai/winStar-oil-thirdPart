@@ -1,0 +1,64 @@
+
+.white {
+  color: #fff;
+}
+
+.selected {
+  color: #3ca8d9;
+  border-bottom: 0.04rem solid #3ca8d9;
+}
+
+.discount-bg {
+  margin-top: 15px;
+  position: relative;
+}
+
+.discount-bg b {
+  font-size: 0.6rem;
+}
+
+.discount-bg .wordLeft {
+  position: absolute;
+  left: 1%;
+  top: 0;
+  width: 28%;
+  padding-top: 4%;
+  font-size: 0.3rem;
+}
+
+.discount-bg .wordRight {
+  position: absolute;
+  top: 0;
+  right: 2.9999%;
+  width: 65%;
+  padding-top: 0.4rem;
+}
+
+.discount-bg .wordRight h5{
+  font-size: 0.3rem;
+}
+
+.discount-bg .wordRight h6{
+  font-size: 0.2rem;
+}
+
+.useBtn {
+  position: absolute;
+  height: 0.5rem;
+  line-height: 0.3rem;
+  border-radius: 0.2rem;
+  padding: 0.01rem 0.2rem;
+  font-size: 0.3rem;
+  background-color: #ffffff;
+  color: #3ca8d9;
+  border: 0.02rem solid #3ca8d9;
+  top: 0.8rem;
+  right: 0;
+}
+
+.yetUseImg {
+  width: 38%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
